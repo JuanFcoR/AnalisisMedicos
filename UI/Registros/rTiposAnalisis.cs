@@ -42,7 +42,7 @@ namespace AnalisisMedicos.UI.Registros
         }
         private bool ExisteEnLaBasedeDatos()
         {
-            TiposAnalisis Ti = TipoAnalisisBLL.Buscar((int)TipoIdNumericUpDown.Value);
+            TiposAnalisis Ti = TiposAnalisisBLL.Buscar((int)TipoIdNumericUpDown.Value);
             return (Ti != null);
         }
 
@@ -66,7 +66,7 @@ namespace AnalisisMedicos.UI.Registros
             int.TryParse(TipoIdNumericUpDown.Value.ToString(), out id);
             limpiar();
 
-            Ti = TipoAnalisisBLL.Buscar(id);
+            Ti = TiposAnalisisBLL.Buscar(id);
 
             if (Ti != null)
             {
@@ -80,9 +80,7 @@ namespace AnalisisMedicos.UI.Registros
         private void GuardarButton_Click(object sender, EventArgs e)
         {
             TiposAnalisis Ti;
-            bool paso = false;
-
-
+            bool paso=false;
             if (!Validar())
                 return;
             Ti = LlenarClase();
@@ -90,7 +88,7 @@ namespace AnalisisMedicos.UI.Registros
 
             if (TipoIdNumericUpDown.Value == 0)
             {
-                paso = TipoAnalisisBLL.Guardar(Ti);
+                paso = TiposAnalisisBLL.Guardar(Ti);
             }
             else
             {
@@ -99,9 +97,9 @@ namespace AnalisisMedicos.UI.Registros
                     MessageBox.Show("No se puede modificar un tipo de analisis que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                paso = TipoAnalisisBLL.Editar(Ti);
+                paso = TiposAnalisisBLL.Editar(Ti);
             }
-            if (paso)
+            if (paso==true)
                 MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             else
@@ -116,7 +114,7 @@ namespace AnalisisMedicos.UI.Registros
             int id;
             int.TryParse(Convert.ToString(TipoIdNumericUpDown.Value), out id);
             limpiar();
-            if (TipoAnalisisBLL.Eliminar(id))
+            if (TiposAnalisisBLL.Eliminar(id))
                 MessageBox.Show("Eliminado");
             else
                 SuperErrorProvider.SetError(TipoIdNumericUpDown, "No se puede eliminar un tipo de analisis que no existe");

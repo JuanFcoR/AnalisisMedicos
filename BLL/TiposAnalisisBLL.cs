@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 
 namespace AnalisisMedicos.BLL
 {
-    public class TipoAnalisisBLL
+    public class TiposAnalisisBLL
     {
         public static bool Guardar(TiposAnalisis TiposAnalisi)
         {
@@ -27,7 +27,7 @@ namespace AnalisisMedicos.BLL
             }
             catch (Exception)
             {
-                //throw;
+                throw;
             }
             return paso;
         }

@@ -271,6 +271,7 @@
             this.Controls.Add(this.label1);
             this.Name = "rAnalisis";
             this.Text = "Analisis";
+            this.Load += new System.EventHandler(this.RAnalisis_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.IdAnalisisNumericUpDown)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
