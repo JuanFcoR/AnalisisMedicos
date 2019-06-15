@@ -38,7 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.UsuarioComboBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.RemoverButton = new System.Windows.Forms.Button();
             this.AgregarButton = new System.Windows.Forms.Button();
@@ -150,13 +150,13 @@
             this.label3.TabIndex = 34;
             this.label3.Text = "Usuario";
             // 
-            // comboBox1
+            // UsuarioComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(81, 91);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(276, 21);
-            this.comboBox1.TabIndex = 35;
+            this.UsuarioComboBox.FormattingEnabled = true;
+            this.UsuarioComboBox.Location = new System.Drawing.Point(81, 91);
+            this.UsuarioComboBox.Name = "UsuarioComboBox";
+            this.UsuarioComboBox.Size = new System.Drawing.Size(276, 21);
+            this.UsuarioComboBox.TabIndex = 35;
             // 
             // panel1
             // 
@@ -254,7 +254,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(429, 450);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.UsuarioComboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.FechaDateTimePicker);
             this.Controls.Add(this.EliminarButton);
@@ -287,7 +287,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox UsuarioComboBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button RemoverButton;
         private System.Windows.Forms.Button AgregarButton;

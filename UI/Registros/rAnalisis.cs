@@ -24,15 +24,35 @@ namespace AnalisisMedicos.UI.Registros
         {
             IdAnalisisNumericUpDown.Value = 0;
             ResultadoTextBox.Text = string.Empty;
-           
-            FechaNacimientoDateTimePicker.Value = DateTime.Now;
-            MyErrorProvider.Clear();
+            FechaDateTimePicker.Value = DateTime.Now;
+            SuperErrorProvider.Clear();
         }
         private void CargarGrid()
         {
             DetalleDataGridView.DataSource = null;
             DetalleDataGridView.DataSource = Detalle;
         }
+        private Analisis LlenarClase()
+        {
+            Analisis analisis = new Analisis();
+            analisis.AnalisisId = Convert.ToInt32(IdAnalisisNumericUpDown.Value);
+            analisis.Fecha = FechaDateTimePicker.Value;
+            analisis.UsuarioId = Convert.ToInt32(UsuarioComboBox.SelectedItem);
+            return analisis;
+        }
+
+
+
+        private void LlenarCampos(Analisis analisis)
+        {
+            IdAnalisisNumericUpDown.Value = analisis.AnalisisId;
+            FechaDateTimePicker.Value = analisis.Fecha;
+            UsuarioComboBox.SelectedIndex = analisis.UsuarioId;
+
+        }
+
+        
+
         private void NuevoButton_Click(object sender, EventArgs e)
         {
 
