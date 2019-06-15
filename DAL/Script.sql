@@ -4,13 +4,25 @@ Use AnalisisDb
 Go
 create table Analisis
 (
-	Analisis varchar(10),
+	
 	AnalisisId int primary key,
 	Fecha date,
-	UsuarioId int not null
+	UsuarioId int not null,
+	TipoId int
 
 )
 Go
+
+Create table Usuarios
+(
+	UsuarioId int Primary key identity,
+	Nombres varchar(30),
+	Email varchar(25),
+	NivelUsuario varchar(15),
+	Usuario varchar(15),
+	Clave varchar(16),
+	FechaIngreso datetime
+);
 
 create table TiposAnalisis
 (

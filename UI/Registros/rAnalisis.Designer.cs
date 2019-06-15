@@ -217,6 +217,7 @@
             this.TipoAnalisisComboBox.Name = "TipoAnalisisComboBox";
             this.TipoAnalisisComboBox.Size = new System.Drawing.Size(211, 21);
             this.TipoAnalisisComboBox.TabIndex = 40;
+            this.TipoAnalisisComboBox.SelectedIndexChanged += new System.EventHandler(this.TipoAnalisisComboBox_SelectedIndexChanged);
             // 
             // label6
             // 

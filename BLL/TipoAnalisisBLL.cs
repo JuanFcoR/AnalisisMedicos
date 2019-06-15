@@ -27,7 +27,7 @@ namespace AnalisisMedicos.BLL
             }
             catch (Exception)
             {
-                throw;
+                //throw;
             }
             return paso;
         }

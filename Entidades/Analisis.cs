@@ -22,6 +22,8 @@ namespace AnalisisMedicos.Entidades
             Fecha = DateTime.Now;
             UsuarioId = 0;
             AnalisisDetalles = new List<AnalisisDetalle>();
+            TipoAnalisisId = 0;
+
             
         }
     }

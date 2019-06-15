@@ -31,7 +31,7 @@ namespace AnalisisMedicos.UI.Registros
             UsuarioComboBox.DataSource = c.Usuarios.Where(p => true).ToList();
             TipoAnalisisComboBox.DisplayMember = "Descripcion";
             TipoAnalisisComboBox.ValueMember = "TipoId";
-            TipoAnalisisComboBox.DataSource = c.TiposAnalisis.Where(p => true).ToList();
+            TipoAnalisisComboBox.DataSource = c.TiposAnalisis.Where(p => p.TipoId==2).ToList();
         }
 
         private void Limpiar()
@@ -195,7 +195,13 @@ namespace AnalisisMedicos.UI.Registros
 
          private void RAnalisis_Load(object sender, EventArgs e)
          {
+            TipoAnalisisComboBox.Items.Clear();
              cargarCombos();
          }
+
+        private void TipoAnalisisComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cargarCombos();
+        }
     }
 }
