@@ -13,6 +13,7 @@ namespace AnalisisMedicos.Entidades
         public int AnalisisId { get; set; }
         public DateTime Fecha{ get; set; }
         public int UsuarioId { get; set; }
+        public int TipoAnalisisId { get; set; }
         public List<AnalisisDetalle> AnalisisDetalles;
         
         public Analisis()
